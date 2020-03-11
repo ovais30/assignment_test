@@ -1,0 +1,12 @@
+development: &default
+ adapter: mysql2
+ encoding: utf8mb4
+ database: test_demodb
+ pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+ username: root
+ password: rails@001
+ socket: /tmp/mysql.sock
+
+
+
+    
