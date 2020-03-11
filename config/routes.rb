@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'follow_followings/index'
+  get 'follow_followings/create'
   get 'tweets/index'
   get 'tweets/create'
   # devise_for :users
@@ -13,4 +15,11 @@ Rails.application.routes.draw do
 
 
   resources :tweets
+
+  resources :follow_followings do 
+    collection do
+      get :follower_list
+      get :following_list
+    end
+  end
 end

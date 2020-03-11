@@ -31,6 +31,7 @@ class User::SessionsController < Devise::SessionsController
                  stts = ''
                  sucs = false
                   msg = 'Invalid email or password.'
+                  resource=[]
                 end
               else
                stts = 'unauthorized'
@@ -45,6 +46,7 @@ class User::SessionsController < Devise::SessionsController
           else
             sucs = false
             msg = 'User does not Exist.'
+            resource = []
             # msg = t('devise.cardex.user_does_not_exist')
           end
         end    
