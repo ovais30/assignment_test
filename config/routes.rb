@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tweets/index'
+  get 'tweets/create'
   # devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users, controllers: {
@@ -8,4 +10,7 @@ Rails.application.routes.draw do
     confirmations: 'user/confirmations',
     passwords: 'user/passwords',
   }
+
+
+  resources :tweets
 end
